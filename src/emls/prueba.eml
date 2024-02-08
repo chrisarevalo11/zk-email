@@ -1,0 +1,88 @@
+Delivered-To: christian.arevalo.fonseca@gmail.com
+Received: by 2002:adf:a4c4:0:b0:33b:525d:75c3 with SMTP id h4csp174472wrb;
+        Wed, 7 Feb 2024 10:00:02 -0800 (PST)
+X-Received: by 2002:aa7:d993:0:b0:560:2cda:f448 with SMTP id u19-20020aa7d993000000b005602cdaf448mr4411434eds.15.1707328802157;
+        Wed, 07 Feb 2024 10:00:02 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1707328802; cv=none;
+        d=google.com; s=arc-20160816;
+        b=a6pkoF4KJVz+tO4bn55nxH5vWHnM0cynQbaVhHcHY+Uac19Gi/br3yy0E0xYypnc4l
+         nVUqcOCTHoR3cGTXGmnHhlUP1M3M8auiKvx21RXyT0KQjL+q5i7dteEHfjLl0fjomOFW
+         wHoK+19GgJSiMbeyvhtTGPfJRkZl/9SHFph+XHfGMyqVIp0OnugtFjnRWfTEMUJ/me8e
+         IGQBqe4YpBmuItqAlUJoDO+760Nc7VvJ4uhCLKHW9ZTIBahgt2VPajLhOcd7hBQWrcMu
+         Gp1k2miQKdsraOWhqGbzFgMnMKdnN2eY6IvrAxMHon9uv2KkkZjX52vmW/7+V+/idETa
+         LBvA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=yCXX0BckMjMJiKbXBZPzvny9+72sxI/4tVD5fhwyDeQ=;
+        fh=OZke0Jd1au0aO1lPLBSz4TC6je34PEoeVMPmtJsc4Z0=;
+        b=aZR/GB/d7LUnp6nkcPo/6O/fFv8DvH6GGBNVmljOnDGdepX+ME3VbtwB0/pb8IYuPW
+         Nvn1Eowbac8X1FIEBn2isgEMw+oJYv+C3iQk8hQXCAi6I3IS2U6wnDZw/wHuuNwpHx7M
+         ToTllzs6tUZXPHBcFdUzI+A6f8N12zGE03HQl0sZOla1we6yZkOCbVTlcgZTefsRDP6a
+         D34lpY5bycAi7pH78q21IxRyep2/qkzzpzgAna4U1l6j/HnG2fHVlXXOMzedtSucwc/B
+         K6cORWlXNepsA5TCb1wTZpvwPDwn4lAHR3NQ8D42AvsKKDs8QKOXBLw33jI0XU7zY8iy
+         dvlQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ZumR8zO2;
+       spf=pass (google.com: domain of tiancris200@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=tiancris200@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <tiancris200@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id v12-20020a056402184c00b0055fc4fa563esor450030edy.9.2024.02.07.10.00.02
+        for <christian.arevalo.fonseca@gmail.com>
+        (Google Transport Security);
+        Wed, 07 Feb 2024 10:00:02 -0800 (PST)
+Received-SPF: pass (google.com: domain of tiancris200@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ZumR8zO2;
+       spf=pass (google.com: domain of tiancris200@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=tiancris200@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1707328801; x=1707933601; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=yCXX0BckMjMJiKbXBZPzvny9+72sxI/4tVD5fhwyDeQ=;
+        b=ZumR8zO2YJlSk6lJ/K0s3/wB7OiqnrbcHkTNA6Y3M8A5S81SFv+BdWoOw7Y9gPiQjP
+         +EqZhl8i0QVs/Rszp0U9DhaZyoi8g8UInA+ukKCOqSLzI4pa46KBJ3SlBzyHfy7fMjG4
+         S0V/fPf7D4s7na0yFzAsdmKqP9xIEVxlfkh+E/xVnFfaK5FdbDu4XDXRixyZAc2I3AmX
+         Gq82X7wbYmLgvRUum8eia96OfCtzD8uQN4Ju1GZOesnO8Q1vhS5mJUW1dIDRHbRXj/U0
+         1LunPA9kAeLk4RBgjmn14rmc5CVVkFoiN0v2vdUrLUHI1L8yLhqush6nHdbJm6hv/k/j
+         fnlA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1707328801; x=1707933601;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=yCXX0BckMjMJiKbXBZPzvny9+72sxI/4tVD5fhwyDeQ=;
+        b=EnLN3P5pNs6ngPIGt6ypQQ9ze7oPQnFs2aQlpZu0GWiGuBdEpBkeAs6azb/M9f+/DE
+         HYbdyvbp8LdWzq7jkDuI0R/7oVBfO6r3l+IWlfOu2FgokKLy3yZqbjPa11qymLAdPB2c
+         HP9JevYthPkZZ2IUks3Ld4aAl2PmmEVpL8XpQm1nWKeVzMhZ7r3Bi48CUVR3RAvb5B9x
+         5FbfmZA8kOHAtNuCvUZ2Dp8Q6ZojwqfCA4+PZbCnzYAh4ljoIXWh9mVoNqbtE/kYW6Ua
+         jkarcRn4NgyrdUiQ7PDQbcKrRCp1HkjRvmmQL+QV43zJmyxkgdJ2VwW4tZWjppkXcVja
+         8KKA==
+X-Gm-Message-State: AOJu0YwIzEp/l9FhF201hTKU4ziq/r9PDs89FBdtmYlyi+bCIZEwq4c6
+	IBK/5SQDaGbpdDjJyRux/tPV8x+MUAFXcgkpG/sWsMJUHOPQUL+japJ8XnxCxBDefsPA+LHgx3p
+	jE9G+1r71+GE1TVyoKMLkplYXdDdqhtiv
+X-Google-Smtp-Source: AGHT+IFYrjMvWCxfUtiih+K0tmEF0DsZySrEDBRqavzoc85MS6XaDx56nsBR7XKh6rTRG9lhOIWDflR3DmOkoUGE2t8=
+X-Received: by 2002:aa7:d308:0:b0:55e:eedc:f9a3 with SMTP id
+ p8-20020aa7d308000000b0055eeedcf9a3mr4991138edq.2.1707328801252; Wed, 07 Feb
+ 2024 10:00:01 -0800 (PST)
+MIME-Version: 1.0
+From: =?UTF-8?Q?Christian_Ar=C3=A9valo?= <tiancris200@gmail.com>
+Date: Wed, 7 Feb 2024 12:59:50 -0500
+Message-ID: <CALV187NY2_zTBJOXoKbJNFnVqohvw+Q0T-Gz0F6HGDXuBrXXuA@mail.gmail.com>
+Subject: Prueba
+To: "christian.arevalo.fonseca@gmail.com" <christian.arevalo.fonseca@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000b6a7620610ce7676"
+
+--000000000000b6a7620610ce7676
+Content-Type: text/plain; charset="UTF-8"
+
+Pruebaa
+
+--000000000000b6a7620610ce7676
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Pruebaa=C2=A0
+
+--000000000000b6a7620610ce7676--
