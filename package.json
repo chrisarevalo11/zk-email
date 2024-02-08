@@ -1,21 +1,22 @@
 {
-  "name": "zk-email",
-  "version": "1.0.0",
-  "description": "zk-email test",
-  "main": "index.js",
-  "repository": " https://github.com/chrisarevalo11/zk-email.git",
-  "license": "MIT",
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsc && node --watch src/index.ts"
-  },
-  "devDependencies": {
-    "@types/node": "^20.11.16",
-    "typescript": "^5.3.3"
-  },
-  "dependencies": {
-    "@zk-email/circuits": "^3.2.3",
-    "@zk-email/contracts": "^5.0.2",
-    "@zk-email/helpers": "^3.1.3"
-  }
+	"name": "zk-email",
+	"version": "1.0.0",
+	"description": "zk-email test",
+	"main": "index.js",
+	"repository": " https://github.com/chrisarevalo11/zk-email.git",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsc",
+		"dev": "ts-node src/index.ts"
+	},
+	"devDependencies": {
+		"@types/node": "^20.11.16",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.3.3"
+	},
+	"dependencies": {
+		"@zk-email/circuits": "^3.2.3",
+		"@zk-email/contracts": "^5.0.2",
+		"@zk-email/helpers": "^3.1.3"
+	}
 }
